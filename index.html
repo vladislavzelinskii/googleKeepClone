@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Keep</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="libs/fontawesome/css/all.css">
+</head>
+<body>
+	<header>
+		<div class="headerMenu tooltip" id="headerMenu"><i class="fas fa-bars fa-2x"></i></div>
+		<div class="headerIcon" id="headerIcon"><i class="fas fa-lightbulb fa-2x"></i></div>
+		<div class="headerLocation" id="headerLocation">Keep</div>
+		<div class="headerSearch">
+			<div class="headerSearchIcon tooltip"><i class="fas fa-search"></i></div>
+			<div class="headerSearchField">Search</div>
+		</div>
+		<div class="headerView tooltip" id="headerViewButton" onclick="headerViewChange()"><i class="fas fa-th-large fa-2x"></i></div>
+		<div class="headerSettings tooltip" id="headerSettingsButton" onclick="headerSettings()"><i class="fas fa-cog fa-2x"></i></div>
+	</header>
+	<main>		
+		<div class="menu" id="menu">
+			<div class="menuButtons" id="menuButtons">
+				<button class="menuButton menuNotesButton" id="menuNotesButton">
+					<i class="far fa-lightbulb fa-2x"></i>
+					<span class="menuText menuNotesText" id="menuNotesText">Notes</span>
+				</button>
+				<button class="menuButton menuArchiveButton" id="menuArchiveButton">
+					<i class="fas fa-archive fa-2x"></i>
+					<span class="menuText menuArchiveText" id="menuArchiveText">Archive</span>
+				</button>
+				<button class="menuButton menuTrashButton" id="menuTrashButton">
+					<i class="far fa-trash-alt fa-2x"></i>
+					<span class="menuText menuTrashText" id="menuTrashText">Trash</span>
+				</button>
+			</div>
+		</div>
+		<div class="workingField" id="workingField">
+			<div class="noteBlockBackground" id="noteBlockBackground"></div>
+			<div class="noteSettingsBackground" id="noteSettingsBackground"></div>
+			<div class="notesTab" id="notesTab">
+				<form class="takeANote" id="takeANote">
+					<div class="preview" id="preview"></div>
+					<textarea id="noteTitleField" class="noteTitleField" placeholder="Enter title" autocomplete="off" oninput="noteTitleFieldGrow()"></textarea>
+					<div id="noteList" class="noteList"></div>
+					<div class="noteStartLine" id="noteStartLine">
+						<textarea id="noteField" class="noteField" placeholder="Note..." oninput="noteClickOrChange()" autocomplete="off"></textarea> 
+						<div class="noteButtons">
+							<input class="inputFile" type="file" id="inputFile" onchange="inputPhoto()" multiple>
+							<label for="inputFile" class="noteButton notePhotoButton tooltip">
+								<i class="far fa-image"></i>
+							</label>
+							<button class="noteButton noteColorButton tooltip" id="noteColorButton" type="button">
+								<i class="fas fa-palette"></i>
+								<div class="notePalette" id="notePalette">
+									<div class="notePalette1 tooltip" id="notePalette1"></div>
+									<div class="notePalette2 tooltip" id="notePalette2"></div>
+									<div class="notePalette3 tooltip" id="notePalette3"></div>
+									<div class="notePalette4 tooltip" id="notePalette4"></div>
+									<div class="notePalette5 tooltip" id="notePalette5"></div>
+									<div class="notePalette6 tooltip" id="notePalette6"></div>
+									<div class="notePalette7 tooltip" id="notePalette7"></div>
+									<div class="notePalette8 tooltip" id="notePalette8"></div>
+									<div class="notePalette9 tooltip" id="notePalette9"></div>
+									<div class="notePalette10 tooltip" id="notePalette10"></div>
+									<div class="notePalette11 tooltip" id="notePalette11"></div>
+									<div class="notePalette12 tooltip" id="notePalette12"></div>
+								</div>
+							</button>
+							<button class="noteButton noteArchiveButton tooltip" onclick="noteCloseToArchive()" id="noteArchiveButton" type="button"><i class="fas fa-archive"></i></button>
+							<button class="noteButton noteListButton tooltip" id="noteListButton" type="button" onclick="noteListButtonFunction()"><i class="far fa-check-square"></i></button>
+							<button class="noteButton noteCloseButton" id="noteCloseButton" onclick="noteClose(); return false;">Close</button>
+						</div>
+					</div>
+				</form>
+				<div class="noteBlocks" id="noteBlocks"></div>
+				<div class="noNotes" id="noNotes">
+					<div class="noNotesIcon"><i class="far fa-lightbulb fa-7x"></i></div>
+					<div class="noNotesText">Notes you add appear here.</div>
+				</div>
+			</div>
+			<div class="archiveTab" id="archiveTab">
+				<div class="archiveBlocks" id="archiveBlocks"></div>
+				<div class="noArchive" id="noArchive">
+					<div class="noArchiveIcon"><i class="fas fa-archive fa-7x"></i></div>
+					<div class="noArchiveText">Archived notes will be stored here.</div>
+				</div>
+			</div>
+			<div class="trashTab" id="trashTab">
+				<div class="trashHeader">
+					Notes are deleted from the basket after 7 days.
+				</div>
+				<div class="trashBlocks" id="trashBlocks"></div>
+				<div class="noTrash" id="noTrash">
+					<div class="noTrashIcon"><i class="far fa-trash-alt fa-7x"></i></div>
+					<div class="noTrashText">There is nothing in the basket.</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer></footer>
+
+	<script src="js/script.js"></script>
+
+</body>
+</html>

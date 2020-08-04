@@ -1,0 +1,1155 @@
+html {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	margin-right: calc(-1 * (100vw - 100%)); 
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	height: 100% - 63px;
+	background-color: #fff;
+}
+
+header {
+	display: flex;
+	border-bottom: 1px solid #dadce0;
+	background-color: inherit; 
+	height: 63px;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	width: 100%;
+}
+
+.headerMenu {
+	margin-left: 22px;
+	color: #5f6368;
+	width: 30px;
+	height: 30px;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 30px;
+}
+
+.headerMenu:hover {
+	background-color: #f0f0f0;
+}
+
+.headerIcon {
+	margin-left: 30px;
+	color: #f5bb17;
+	cursor: pointer;
+}
+
+.headerLocation {
+	margin-left: 15px;
+	font-family: 'Product Sans', Arial, sans-serif;
+	font-size: 22px;
+	color: #5f6368;
+	cursor: pointer;
+}
+
+.headerSearch {
+	display: flex;
+	flex-direction: row;
+	margin-left: 90px;
+	background-color: #f1f3f4;
+	border-radius: 5px;
+	width: 720px;
+	height: 48px;
+	align-items: center;
+}
+
+.headerSearchIcon {
+	color: #5f6368;
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+.headerSearchField {
+	color: #6f6f9a;
+	padding-left: 20px;
+	width: 550px;
+	cursor: text;
+}
+
+.headerView {
+	margin-left: 350px;
+	width: 33px;
+	color: #767676;
+	cursor: pointer;
+}
+
+.headerSettings {
+	margin-left: 20px;
+	color: #767676;
+	cursor: pointer;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	height: 100% - 63px;
+	margin-top: 63px; 
+	position: relative;
+	background-color: inherit;
+}
+
+
+
+.menu {
+	display: flex;
+	flex-direction: row;
+	width: 100px;
+	position: fixed;
+	top: 65px;
+	height: 100%;
+	z-index: 1;
+	background-color: inherit;
+}
+
+.menuButtons {
+	display: flex;
+	flex-direction: column;
+	padding-left: 25px;
+	padding-top: 20px;
+}
+
+.menuButton {
+	outline: none;
+	border: none;
+	border-radius: 24px;
+	height: 45px;
+	min-width: 45px;
+	width: auto;
+	padding: 0;
+	cursor: pointer;
+	color: inherit;
+	display: flex;
+	flex-direction: row;
+}
+
+.menuButton i {
+	margin: auto 0;
+}
+
+
+.menuButton span {
+	display: none;
+}
+
+.menuNotesButton {
+	background-color: #feefc3;
+}
+
+.menuArchiveButton {
+	margin-top: 10px;
+	background-color: inherit;
+}
+
+.menuTrashButton {
+	margin-top: 10px;
+	background-color: inherit;
+}
+
+.menuNotesButton i {
+	padding-left: 13px;
+}
+
+.menuArchiveButton i {
+	padding-left: 9px;
+}
+
+.menuTrashButton i {
+	padding-left: 11px;
+}
+
+.menuText {
+	font-size: 20px;
+	padding-left: 40px;
+	padding-right: 60px; 
+}
+
+.menuNotesText {
+	height: 45px;
+	line-height: 45px;
+	cursor: pointer;
+}
+
+.menuArchiveText {
+	height: 45px;
+	line-height: 45px;
+	padding-left: 37px;
+	cursor: pointer;
+}
+
+.menuTrashText {
+	height: 45px;
+	line-height: 45px;
+	padding-left: 39px;
+	cursor: pointer;
+}
+
+
+.workingField {
+	margin-left: 70px;
+	padding-left: 30px;
+	width: 100%;
+	height: calc(100vh - 63px);
+}
+
+
+.notesTab {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+.takeANote {
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+	width: 500px;
+	min-height: 50px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px 1px #c3c5c6;
+	background-color: #ffffff;
+}
+
+.noteStartLine {
+	display: flex;
+	flex-direction: row;
+	padding-left: 10px;
+	line-height: 50px;
+	width: 500px;
+}
+
+.noteTitleField {
+	display: none;
+	border: none;
+	margin-top: 14px;
+	margin-left: 10px;
+	padding-left: 10px;
+	outline: none;
+	font-size: 18px;
+	height: 25px;
+	width: 450px;
+	background-color: inherit;
+	overflow-y: auto;
+}
+
+.noteField {
+	border: none;
+	margin-top: 14px;
+	padding-left: 10px;
+	outline: none;
+	width: 355px;
+	background-color: inherit;
+	resize: none;
+	overflow-y: auto;
+}
+
+textarea {
+	resize: none;
+	overflow: hidden;
+	min-height: 20px;
+	height: 20px;
+	padding: 0;
+	line-height: 20px;
+	color: inherit;
+}
+
+.noteButton {
+	margin-top: 5px;
+	margin-left: 10px;
+	color: #000;
+	border: none;
+	outline: none;
+	color: inherit;
+	background-color: inherit;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.noteListButton {
+	
+}
+
+.notePhotoButton {
+	
+}
+
+#preview {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid block;
+	overflow-y: auto;
+}
+
+.notePhotoBlock {
+	position: relative;
+}
+
+.notePhotoDeleteButton {
+	visibility: hidden;
+	position: absolute;
+	left: 440px;
+	bottom: 20px;
+	height: 30px;
+	width: 30px;
+	background-color: rgba(20, 20, 20, 0.7);
+	color: rgb(230, 230, 230);
+	border: none;
+	border-radius: 3px;
+}
+
+.notePhotoDeleteButton:hover {
+	background-color: rgba(20, 20, 20, 1);
+	color: rgb(235, 235, 235);
+}
+
+.notePhotoBlock:hover .notePhotoDeleteButton {
+	visibility: visible;
+}
+
+.editNotePhotoDeleteButton {
+	visibility: hidden;
+	position: absolute;
+	left: 450px;
+	bottom: 20px;
+	height: 30px;
+	width: 30px;
+	background-color: rgba(20, 20, 20, 0.7);
+	color: rgb(230, 230, 230);
+	border: none;
+	border-radius: 3px;
+}
+
+.editNotePhotoDeleteButton:hover {
+	background-color: rgba(20, 20, 20, 1);
+	color: rgb(235, 235, 235);
+}
+
+.notePhotoBlock:hover .editNotePhotoDeleteButton {
+	visibility: visible;
+}
+
+.noteButton:hover {
+	background-color: rgba(233, 234, 234 , 0.3);
+}
+
+.noteArchiveButton {
+	display: none;
+}
+
+.noteColorButton {
+	display: none;
+	position: relative;
+}
+
+.noteColorButton:hover .notePalette {
+	visibility: visible;
+}
+
+.noteCloseButton {
+	display: none;
+	color: #202020;
+	margin-left: 180px;
+	font-weight: bold;
+	height: 30px;
+	line-height: 30px;
+	width: 70px;
+	border-radius: 5px;
+}
+
+.noteCloseButton:hover {
+	background-color: rgba(249, 249, 249, 0.4);
+}
+
+
+.noteBlocks {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	width: 100%;
+	padding-top: 10px;
+	align-items: flex-start;
+}
+
+.noteBlocksView {
+	display: flex;
+	flex-direction: column;
+	padding-top: 10px;
+}
+
+
+.noteBlock {
+	width: 200px;
+	height: auto;
+	border: 1px solid #e0e0e0;
+	border-radius: 10px;
+	margin-top: 20px;
+	margin-left: 20px;
+	font-weight: bold;
+	cursor: default;
+	position: relative;
+}
+
+.noteBlockView {
+	width: 600px;
+}
+
+.noteBlockView .noteBlockPhoto {
+	width: 600px;
+}
+
+.noteBlockView .noteBlockButtons {
+	width: 595px;
+}
+
+.noteBlock:hover {
+	box-shadow: 0px 1px 3px 2px #dbdcdc;
+}
+
+.noteBlockPhoto {
+	border-radius: 10px;
+	margin-bottom: -4px;
+}
+
+.noteBlockTitle {
+	word-wrap: break-word;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: auto;
+	white-space: pre-wrap;
+}
+
+.noteBlockField {
+	word-wrap: break-word;
+	font-weight: normal;
+	height: 40px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: auto;
+	white-space: pre-wrap;
+}
+
+.noteBlockButtons {
+	padding-left: 5px;
+	height: 45px;
+}
+
+.noteBlockButtonsPhoto {
+	position: absolute;
+	bottom: -1px;
+	width: 195px;
+	height: 40px;
+	border-radius: 5px;
+}
+.noteBlock:hover .noteBlockButtonsPhoto {
+	background-color: rgba(200, 200, 200,0.7);
+}
+
+.noteBlockButtons > button,
+.noteBlockButtons > label {
+	display: none;
+	margin-top: 10px;
+	margin-right: 5px;
+	color: #000;
+	outline: none;
+	color: inherit;
+	background-color: inherit;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 15px;
+	border: none;
+	cursor: pointer;
+}
+
+.noteBlock:hover button,
+.noteBlock:hover label {
+	display: inline-block;
+}
+
+.noteBlockButtonsPhoto > button,
+.noteBlockButtonsPhoto > label {
+	background-color: rgba(0,0,0,0);
+	margin-top: 5px; 
+}
+
+
+.noteBlockButtons > button:hover,
+.noteBlockButtons > label:hover {
+	background-color: rgba(233, 234, 234);
+}
+
+
+.noteBlockBackground {
+	display: none;
+	position: fixed;
+	z-index: 3;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.2);
+}
+
+.editANote {
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+	width: 500px;
+	min-height: 50px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px 1px #c3c5c6;
+	background-color: #fff;
+	position: absolute;
+	left: 550px;
+	top: 80px;
+	height: auto;
+	z-index: 2;
+}
+
+.editNoteColorButton:hover .notePalette {
+	visibility: visible;
+}
+
+
+.archiveBlocks {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	width: 100%;
+	padding-top: 10px;
+	align-items: flex-start;
+}
+
+.trashBlocks {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	width: 100%;
+	padding-top: 10px;
+	align-items: flex-start;
+}
+
+.noteBlockColorButton {
+	position: relative;
+}
+
+.noteBlockColorButton:hover .notePalette {
+	visibility: visible;
+}
+
+.notePalette {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	visibility: hidden;
+	background-color: #fff;
+	position: absolute;
+	left: 15px;
+	top: -95px;
+	height: 100px;
+	width: 120px;
+	padding-left: 2px;
+	box-shadow: 1px 1px 3px 2px #dbdcdc;
+	z-index: 10;
+}
+
+.notePalette > div > div {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	visibility: hidden;
+	color: #fff;
+	background-color: grey;
+	position: relative;
+	left: -20px;
+	top: 25px;
+	height: 20px;
+	width: 80px;
+	padding-left: 2px;
+	box-shadow: 1px 1px 3px 2px #dbdcdc;
+	z-index: 11;
+}
+
+.notePalette > div > div > span {
+	position: absolute;
+	left: 5px;
+}
+
+
+.notePalette > div:hover > div {
+	visibility: visible;
+}
+
+
+.notePalette > div {
+	margin-left: 5px;
+	border-radius: 12px;
+	width: 20px;
+	height: 20px;
+}
+
+.notePalette > div:hover {
+	border: 1px solid black;
+}
+
+.notePalette1 {
+	background-color: #ffffff;
+	border: 2px solid #ffffff;
+}
+.notePalette2 {
+	background-color: #f28b82;
+	border: 2px solid #f28b82;
+}
+.notePalette3 {
+	background-color: #fbbc04;
+	border: 2px solid #fbbc04;
+}
+.notePalette4 {
+	background-color: #fff475;
+	border: 2px solid #fff475;
+}
+.notePalette5 {
+	background-color: #ccff90;
+	border: 2px solid #ccff90;
+}
+.notePalette6 {
+	background-color: #a7ffeb;
+	border: 2px solid #a7ffeb;
+}
+.notePalette7 {
+	background-color: #cbf0f8;
+	border: 2px solid #cbf0f8;
+}
+.notePalette8 {
+	background-color: #aecbfa;
+	border: 2px solid #aecbfa;
+}
+.notePalette9 {
+	background-color: #d7aefb;
+	border: 2px solid #d7aefb;
+}
+.notePalette10 {
+	background-color: #fdcfe8;
+	border: 2px solid #fdcfe8;
+}
+.notePalette11 {
+	background-color: #e6c9a8;
+	border: 2px solid #e6c9a8;
+}
+.notePalette12 {
+	background-color: #e8eaed;
+	border: 2px solid #e8eaed;
+}
+
+.notePalette > div:hover {
+	border: 2px solid black !important;
+}
+
+
+.noNotesIcon {
+	padding-top: 180px;
+	padding-left: 120px;
+	color: #e6e6e6;
+}
+
+.noNotesText {
+	padding-top: 20px;
+	font-size: 30px;
+	color: #80868b;
+}
+
+
+.archiveTab {
+	display: none;
+	align-items: center;
+	flex-direction: column;
+}
+
+.noArchiveIcon {
+	padding-top: 180px;
+	padding-left: 120px;
+	color: #e6e6e6;
+}
+
+.noArchiveText {
+	padding-top: 20px;
+	font-size: 30px;
+	color: #80868b;
+}
+
+
+.trashTab {
+	display: none;
+	align-items: center;
+	flex-direction: column;
+}
+
+.trashHeader {
+	padding-top: 20px;
+}
+
+.noTrashIcon {
+	padding-top: 180px;
+	padding-left: 120px;
+	color: #e6e6e6;
+}
+
+.noTrashText {
+	padding-top: 20px;
+	font-size: 30px;
+	color: #80868b;
+}
+
+
+.inputFile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputFile + label {
+	display: inline-block;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+}
+
+.inputFile + label > i {
+	padding-left: 12px;
+}
+
+.inputFile + label:hover {
+	background-color: rgba(233, 234, 234 , 0.3);
+}
+
+.editInputFile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.editInputFile + label {
+	cursor: pointer;
+	margin-top: 5px;
+}
+
+.editInputFile + label > i {
+	padding-left: 7px;
+}
+
+
+.emptyNote {
+	padding-top: 15px;
+	padding-left: 15px;
+	font-size: 20px;
+	color: grey;
+}
+
+
+.noteList {
+	display: none;
+	flex-direction: column;
+	padding-top: 10px;
+	height: auto;
+	overflow: hidden;
+	padding-bottom: 1px;
+}
+
+.noteListItem {
+	display: flex;
+	flex-direction: row;
+	height: auto;
+	line-height: 24px;
+}
+
+.noteListMoveButton {
+	visibility: hidden;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 24px;
+	cursor: move;
+}
+
+.noteListStatus {
+	margin: 0 2px;
+	height: 24px;
+	cursor: pointer;
+	background-color: inherit;
+}
+
+.noteListField {
+	margin: 2px 0 0 10px;
+	padding: 0;
+	border: none;
+	outline: none;
+	height: 24px;
+	width: 400px;
+	background-color: inherit;
+}
+
+.noteListDeleteButton {
+	visibility: hidden;
+	margin: 0 auto;
+	height: 24px;
+	cursor: pointer;
+}
+
+.noteListItem:hover .noteListMoveButton,
+.noteListItem:hover .noteListDeleteButton {
+	visibility: visible;
+}
+
+#noteListNewItemIcon {
+	padding-left: 31px;
+	position: relative;
+	left: -2px;
+	top: 4px;
+	color: grey;
+}
+
+.noteBlockList {
+	flex-direction: column;
+	padding-top: 10px;
+	height: auto;
+}
+
+.noteBlockListItem {
+	display: flex;
+	flex-direction: row;
+	min-height: 24px;
+	height: auto;
+	line-height: 24px;
+	padding-left: 10px;
+}
+
+.noteBlockListStatus {
+	margin-top: 6px;
+	margin-right: 0;
+	cursor: pointer;
+}
+
+.noteBlockListField {
+	margin: 0 0 0 10px;
+	padding: 0;
+	border: none;
+	outline: none;
+	min-height: 24px;
+	height: auto;
+	width: auto;
+	margin-right: 10px;
+	word-wrap: break-word;
+	overflow: auto;
+	font-weight: normal;
+	white-space: pre-wrap;
+}
+
+
+
+.tooltip {
+	position: relative;
+}
+.tooltip:before {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -30px;
+	left: 50%;
+	height: 24px;
+	line-height: 24px;
+	padding: 0 5px;
+	box-sizing: border-box;
+	background-color: rgba(0,0,0,0.7);
+	border-radius: 2px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: normal;
+	font-family: 'Product Sans', Arial, sans-serif;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.6s;
+	z-index: 3;
+}
+.tooltip:hover:before {
+	opacity: 1;
+	visibility: visible;
+}
+
+.headerMenu:before {
+	content: 'Main menu';
+	width: 90px;
+	margin-left: -45px;
+}
+
+.headerSearchIcon:before {
+	content: 'Search';
+	width: auto;
+	margin-left: -30px;
+}
+
+.headerView:before {
+	content: 'List';
+	width: 36px;
+	margin-left: -18px;
+}
+.headerViewChanged:before {
+	content: 'Grid';
+	width: 40px;
+	margin-left: -20px;
+}
+
+.headerSettings:before {
+	content: 'Settings';
+	width: auto;
+	margin-left: -33px;
+}
+
+.notePhotoButton:before {
+	content: 'Add photo';
+	width: 84px;
+	margin-left: -42px;
+}
+
+.noteListButton:before {
+	content: 'To list';
+	width: 60px;
+	margin-left: -30px;
+}
+
+.noteColorButton:before {
+	content: 'Change color';
+	width: 106px;
+	margin-left: -53px;
+}
+
+.noteArchiveButton:before {
+	content: 'To archive';
+	width: 84px;
+	margin-left: -42px;
+}
+
+.noteBlockPhotoButton:before {
+	content: 'Add photo';
+	width: 84px;
+	margin-left: -42px;
+}
+
+.noteBlockListButton:before {
+	content: 'To list';
+	width: 60px;
+	margin-left: -30px;
+}
+
+.noteBlockListToTextButton:before {
+	content: 'To text';
+	width: 60px;
+	margin-left: -30px;
+}
+
+.noteBlockColorButton:before {
+	content: 'Change color';
+	width: 106px;
+	margin-left: -53px;
+}
+
+.noteBlockArchiveButton:before {
+	content: 'To archive';
+	width: 84px;
+	margin-left: -42px;
+}
+
+.noteBlockReturnFromArchive:before {
+	content: 'Return from archive';
+	width: 156px;
+	margin-left: -78px;
+}
+
+.noteBlockTrashButton:before {
+	content: 'To trash';
+	width: 68px;
+	margin-left: -34px;
+}
+
+.noteBlockReturnFromTrash:before {
+	content: 'Return from trash';
+	width: 138px;
+	margin-left: -69px;
+}
+
+.noteBlockDeleteButton:before {
+	content: 'Delete forever';
+	width: 116px;
+	margin-left: -58px;
+}
+
+.noteListDeleteButton:before {
+	content: 'Delete';
+	width: 58px;
+	margin-left: -29px;
+}
+
+.notePalette > div:before {
+	transition: none;
+}
+
+.notePalette1:before {
+	content: "Default";
+	width: 64px;
+	margin-left: -32px;
+}
+.notePalette2:before {
+	content: "Red";
+	width: 42px;
+	margin-left: -21px;
+}
+.notePalette3:before {
+	content: "Orange";
+	width: 66px;
+	margin-left: -33px;
+}
+.notePalette4:before {
+	content: "Yellow";
+	width: 58px;
+	margin-left: -29px;
+}
+.notePalette5:before {
+	content: "Green";
+	width: 58px;
+	margin-left: -29px;
+}
+.notePalette6:before {
+	content: "Blue-green";
+	width: 92px;
+	margin-left: -46px;
+}
+.notePalette7:before {
+	content: "Blue";
+	width: 48px;
+	margin-left: -24px;
+}
+.notePalette8:before {
+	content: "Dark blue";
+	width: 86px;
+	margin-left: -43px;
+}
+.notePalette9:before {
+	content: "Purple";
+	width: 58px;
+	margin-left: -29px;
+}
+.notePalette10:before {
+	content: "Pink";
+	width: 46px;
+	margin-left: -23px;
+}
+.notePalette11:before {
+	content: "Brown";
+	width: 58px;
+	margin-left: -29px;
+}
+.notePalette12:before {
+	content: "Grey";
+	width: 50px;
+	margin-left: -25px;
+}
+
+
+.noteSettingsBackground {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.2);
+}
+
+.settingsModal {
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+	padding: 15px; 
+	width: 300px;
+	min-height: 50px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px 1px #c3c5c6;
+	background-color: #ffffff;
+	color: inherit;
+	position: absolute;
+	left: 650px;
+	top: 80px;
+	height: auto;
+	z-index: 2;
+}
+
+.settingsModal h2 {
+	margin: 10px auto 25px;
+}
+
+.settingsItem {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.settingsCheckbox {
+	cursor: pointer;
+}
+
+.settingsButtons {
+	margin: 10px; 
+	margin-bottom: 0px;
+}
+
+.settingsButtons button {
+	padding: 0;
+	background-color: inherit;
+	color: inherit;
+	height: 40px;
+	width: 80px;
+	font-size: 14px; 
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.settingsCanselButton {
+	margin-left: 105px;
+}
+
+.settingsCanselButton:hover {
+	background-color: #f9f9f9;
+}
+
+.settingsSaveButton {
+	color: #1f76e9;
+	margin-left: 10px;
+}
+
+.settingsSaveButton:hover {
+	background-color: #e8f0fe;
+}
